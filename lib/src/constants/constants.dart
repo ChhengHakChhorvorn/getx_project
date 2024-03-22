@@ -1,8 +1,18 @@
 import 'package:flutter/cupertino.dart';
 
-class ConstantsAPI{
+class ConstantAPI{
   String baseURL = "";
 }
+
+class ConstantFont{
+  static String roboto = "";
+}
+
+class ConstantDir{
+  static String icons = "assets/icons";
+  static String images = "assets/images";
+}
+
 
 class ConstantPreferenceKey{
   static String accessTokenKey = "accessTokenKey";

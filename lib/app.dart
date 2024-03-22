@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
 import 'package:getx_project/languages/khmer_cupertino_localization_delegate.dart';
+import 'package:getx_project/src/constants/themes.dart';
 import 'package:getx_project/src/service/localization_service.dart';
 
 import 'src/screens/home/home_screen.dart';
@@ -14,7 +15,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
   @override
   void initState() {
     super.initState();
@@ -26,10 +26,7 @@ class _MyAppState extends State<MyApp> {
     return GetMaterialApp(
       translations: LocalizationService(),
       fallbackLocale: LocalizationService.fallbackLocale,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: customTheme,
       localizationsDelegates: const [
         ...GlobalMaterialLocalizations.delegates,
         GlobalWidgetsLocalizations.delegate,
