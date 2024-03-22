@@ -1,20 +1,21 @@
-import 'package:flutter/cupertino.dart';
 
-class ConstantAPI{
-  String baseURL = "";
+
+class ConstantAPI {
+  static String baseURL = "";
+
+  static String loginRequest = "";
 }
 
-class ConstantFont{
+class ConstantFont {
   static String roboto = "";
 }
 
-class ConstantDir{
+class ConstantDir {
   static String icons = "assets/icons";
   static String images = "assets/images";
 }
 
-
-class ConstantPreferenceKey{
+class ConstantPreferenceKey {
   static String accessTokenKey = "accessTokenKey";
   static String languageKey = "languageKey";
 }
