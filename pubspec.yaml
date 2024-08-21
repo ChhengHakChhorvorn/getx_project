@@ -20,7 +20,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
 
-  cupertino_icons: ^1.0.6
+  cupertino_icons: ^1.0.8
 
   # Get x
   get: ^4.6.6
@@ -28,27 +28,28 @@ dependencies:
 
   # Widget
   auto_size_text: ^3.0.0
-  carousel_slider: ^4.2.1
+  carousel_slider: ^5.0.0
   animations: ^2.0.11
   loading_animation_widget: ^1.2.1
   flutter_svg: ^2.0.10+1
 
   # Utils
-  device_info_plus: ^10.0.1
-  network_info_plus: ^5.0.2
-  alice: ^0.4.1
+  device_info_plus: ^10.1.2
+  network_info_plus: ^6.0.1
+  alice: ^0.4.2
   flutter_dotenv: ^5.1.0
-  dio: ^5.4.1
+  dio: ^5.6.0
   google_fonts: ^6.2.1
+  sentry_flutter: ^8.7.0
 
 
   # Firebase
-  firebase_core: ^2.27.1
-  firebase_auth: ^4.17.9
-  firebase_remote_config: ^4.3.18
+  firebase_core: ^3.3.0
+  firebase_auth: ^5.1.4
+  firebase_remote_config: ^5.0.4
 
   # Local Storage
-  shared_preferences: ^2.2.2
+  shared_preferences: ^2.3.2
 
 
 
@@ -58,7 +59,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^3.0.0
+  flutter_lints: ^4.0.0
 
 flutter:
 

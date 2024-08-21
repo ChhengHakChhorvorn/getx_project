@@ -1,6 +1,10 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_project/src/service/localization_service.dart';
 import 'package:getx_project/src/widgets/dialogs/info_dialog.dart';
+import 'package:sentry_flutter/sentry_flutter.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({
@@ -18,7 +22,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         // title: Text('app_title'.tr),
-        title: Text('ឈ្មោះកម្មវិធី'.tr),
+        title: Text('app_title'.tr),
       ),
       body: Center(
         child: Column(
@@ -29,14 +33,8 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          showInfoDialog(
-              isError: true,
-              title: "Testing",
-              message: "Testing Message",
-              onTap: () {
-                print("Confirm");
-              });
+        onPressed: () async {
+
         },
         tooltip: 'Increment',
         child: const Icon(Icons.add),

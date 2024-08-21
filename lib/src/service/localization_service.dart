@@ -10,11 +10,11 @@ import '../controller/remote_config_controller.dart';
 
 class LocalizationService extends Translations {
   // static const locale = Locale('en', 'US');
-  static const locale = Locale('km', 'KM');
+  static const locale = Locale('km', 'KH');
 
   // fallbackLocale saves the day when the locale gets in trouble
   // static const fallbackLocale = Locale('en', 'US');
-  static const fallbackLocale = Locale('km', 'KM');
+  static const fallbackLocale = Locale('km', 'KH');
 
   // Supported languages
   // Needs to be same order with locales
