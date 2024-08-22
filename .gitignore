@@ -51,3 +51,4 @@ app.*.map.json
 *.ap_
 *.aab
 
+/ios/Podfile.lock
