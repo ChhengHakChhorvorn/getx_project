@@ -4,6 +4,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_project/src/widgets/dialogs/info_dialog.dart';
+import 'package:sentry_flutter/sentry_flutter.dart';
 
 Future<void> fetchDataFromAPI(Function func,
     {bool isLoading = false, Function? onExpiredToken}) async {
@@ -15,7 +16,8 @@ Future<void> fetchDataFromAPI(Function func,
     if (isLoading) {
       Get.back(closeOverlays: true);
     }
-  } on DioException catch (error) {
+  } on DioException catch (error, stacktrace) {
+    Sentry.captureException(error, stackTrace: stacktrace);
     log(error.response?.statusCode.toString() ?? '');
     log(error.requestOptions.data.toString());
     if (error.response?.statusCode.toString() == '401' ||
@@ -34,21 +36,24 @@ Future<void> fetchDataFromAPI(Function func,
         message: error.requestOptions.data.toString(),
       );
     }
-  } on ErrorDescription catch (error) {
+  } on ErrorDescription catch (error, stacktrace) {
+    Sentry.captureException(error, stackTrace: stacktrace);
     log(error.toString());
     showInfoDialog(
       isError: true,
       title: 'Something went wrong!',
       message: error.toString(),
     );
-  } on Exception catch (error) {
+  } on Exception catch (error, stacktrace) {
+    Sentry.captureException(error, stackTrace: stacktrace);
     log(error.toString());
     showInfoDialog(
       isError: true,
       title: 'Something went wrong!',
       message: error.toString(),
     );
-  } catch (error) {
+  } catch (error, stacktrace) {
+    Sentry.captureException(error, stackTrace: stacktrace);
     log(error.toString());
     showInfoDialog(
       isError: true,

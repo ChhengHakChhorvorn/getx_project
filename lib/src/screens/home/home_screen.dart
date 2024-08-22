@@ -34,7 +34,12 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
-
+          List<int> numbers = [];
+          try {
+            log("Number: ${numbers.first}");
+          } on Exception catch (error, stacktrace) {
+            Sentry.captureException(error, stackTrace: stacktrace);
+          }
         },
         tooltip: 'Increment',
         child: const Icon(Icons.add),
