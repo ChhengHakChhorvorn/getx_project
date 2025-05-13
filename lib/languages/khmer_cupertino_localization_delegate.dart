@@ -40,18 +40,6 @@ class KhmerCupertinoLocalizations extends CupertinoLocalizationKm {
     'ធ្នូ',
   ];
 
-  KhmerCupertinoLocalizations()
-      : super(
-          fullYearFormat: DateFormat.y('km'),
-          dayFormat: DateFormat.d('km'),
-          mediumDateFormat: DateFormat.yMd('km'),
-          singleDigitHourFormat: DateFormat('h'),
-          singleDigitMinuteFormat: DateFormat('m'),
-          doubleDigitMinuteFormat: DateFormat('mm'),
-          singleDigitSecondFormat: DateFormat('s'),
-          decimalFormat: NumberFormat(''),
-        );
-
   @override
   String datePickerMonth(int monthIndex) {
     return _months[monthIndex - 1];
@@ -70,11 +58,32 @@ class KhmerCupertinoLocalizations extends CupertinoLocalizationKm {
   /// This method is typically used to create a [LocalizationsDelegate].
   static Future<CupertinoLocalizations> load(Locale locale) {
     return SynchronousFuture<CupertinoLocalizations>(
-        KhmerCupertinoLocalizations());
+        KhmerCupertinoLocalizations(
+      fullYearFormat: DateFormat.y('km'),
+      dayFormat: DateFormat.d('km'),
+      mediumDateFormat: DateFormat.yMd('km'),
+      singleDigitHourFormat: DateFormat('h'),
+      singleDigitMinuteFormat: DateFormat('m'),
+      doubleDigitMinuteFormat: DateFormat('mm'),
+      singleDigitSecondFormat: DateFormat('s'),
+      decimalFormat: NumberFormat(''),
+      weekdayFormat: DateFormat(""),
+    ));
   }
 
   /// A [LocalizationsDelegate] that uses [DefaultCupertinoLocalizations.load]
   /// to create an instance of this class.
   static const LocalizationsDelegate<CupertinoLocalizations> delegate =
       _CupertinoLocalizationsDelegate();
+
+  KhmerCupertinoLocalizations(
+      {required super.fullYearFormat,
+      required super.dayFormat,
+      required super.weekdayFormat,
+      required super.mediumDateFormat,
+      required super.singleDigitHourFormat,
+      required super.singleDigitMinuteFormat,
+      required super.doubleDigitMinuteFormat,
+      required super.singleDigitSecondFormat,
+      required super.decimalFormat});
 }

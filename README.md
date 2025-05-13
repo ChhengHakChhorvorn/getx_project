@@ -1,6 +1,6 @@
 # getx_project
 
-A new Flutter project.
+Estate Operation App
 
 ## Getting Started
 
